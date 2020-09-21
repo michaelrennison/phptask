@@ -43,7 +43,35 @@
 
     
     class Counter {
-        
-        
 
+        /* @var $count integer */
+        private $count;
+
+        // construct the class and assign the count provided, if no count is provided then default to 0
+        public function __construct($count = 0) {
+            $this->count = $count;
+        }
+
+        /**
+         * increment the count value by the integer provided, if no integer is provided default to 1
+         * @param int $n
+         */
+        public function count($n = 1) {
+            $this->count += $n;
+        }
+
+        /**
+         * return the value of the count variable
+         * @return int|mixed
+         */
+        public function get() {
+            return $this->count;
+        }
+
+        /**
+         * reset the count to 0
+         */
+        public function reset() {
+            $this->count = 0;
+        }
     }
